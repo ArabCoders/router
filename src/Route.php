@@ -37,7 +37,7 @@ class Route implements Interfaces\Route
      */
     private $conditions = [ ];
 
-    public function route( array $params = [ ] )
+    public function route( array $params = [ ] ): Interfaces\Route
     {
         $this->url = $params['rule'];
 
@@ -78,6 +78,8 @@ class Route implements Interfaces\Route
 
             $this->isMatched = true;
         }
+
+        return $this;
     }
 
     public function isMatched(): bool

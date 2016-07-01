@@ -22,8 +22,10 @@ interface Route
      * parse route
      *
      * @param array $params
+     *
+     * @return Route
      */
-    public function route( array $params = [ ] );
+    public function route( array $params = [ ] ): Route;
 
     /**
      * Whether the route matches.

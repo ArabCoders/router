@@ -51,17 +51,17 @@ class Router implements RouterInterface
     /**
      * @var string Default action
      */
-    protected  $defaultAction = 'index';
+    protected $defaultAction = 'index';
 
     /**
      * @var string request URI
      */
-    protected  $requestUri;
+    protected $requestUri;
 
     /**
      * @var RouteInterface
      */
-    protected  $routeClass;
+    protected $routeClass;
 
     public function __construct( array $options = [ ] )
     {
@@ -136,7 +136,7 @@ class Router implements RouterInterface
         return false;
     }
 
-    public function setRoute( RouteInterface $route, array $options = [ ] )
+    public function setRoute( RouteInterface $route, array $options = [ ] ): RouterInterface
     {
         if ( !empty( $route->params ) )
         {
@@ -191,11 +191,11 @@ class Router implements RouterInterface
         return $this;
     }
 
-    public function getDefaultAction()
+    public function getDefaultAction(): string
     {
         return $this->defaultAction;
     }
-    
+
     public function setDefaultController( string $controller ): RouterInterface
     {
         $this->defaultController = $controller;
@@ -203,9 +203,9 @@ class Router implements RouterInterface
         return $this;
     }
 
-    public function getDefaultController()
+    public function getDefaultController(): string
     {
         return $this->defaultController;
     }
-    
+
 }
