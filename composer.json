@@ -1,0 +1,27 @@
+{
+    "name": "arabcoders/router",
+    "type": "library",
+    "description": "Router",
+    "keywords": [
+        "router",
+        "request routing"
+    ],
+    "homepage": "https://www.abdulmohsen.me",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "AbdulMohsen B. A. A.",
+            "email": "admin@arabcoders.org",
+            "homepage": "http://abdulmohsen.me"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "arabcoders\\router\\": "src/"
+        }
+    }
+}
+
